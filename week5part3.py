@@ -7,7 +7,7 @@ def all_perfect_numbers():
     """
     index = int(2)
     while True:
-        if sum(x for x in range(1, index) if not index % x) == index:
+        if sum(index_2 for index_2 in range(1,  index//2 + 1) if not index % index_2) == index:
             yield index
         index = index + 1
 
@@ -20,6 +20,8 @@ if __name__ == '__main__':
     print(next(all_perfect_numbers_generator))
     print(next(all_perfect_numbers_generator))
     print(next(all_perfect_numbers_generator))
+    print(next(all_perfect_numbers_generator))
+
 
     # # Warning!!!
     # # After the 4 call the computer get really hot...
